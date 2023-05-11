@@ -8,7 +8,9 @@ mod maptype;
 use maptype::*;
 
 use rand::Rng;
+use serde::{Serialize, Deserialize};
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Field {
     size: Point,
     field: Vec<MapType>

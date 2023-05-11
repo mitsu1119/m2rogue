@@ -1,4 +1,5 @@
 use std::ops::Range;
+use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Direction {
@@ -47,7 +48,7 @@ impl Iterator for Direction {
     }
 }
 
-#[derive(Debug, Copy, Clone, PartialEq, Default)]
+#[derive(Debug, Copy, Clone, PartialEq, Default, Serialize, Deserialize)]
 pub struct Point {
     pub x: usize,
     pub y: usize
